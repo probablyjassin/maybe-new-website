@@ -1,22 +1,43 @@
 <template>
-    <div>
-        <UContainer>
-        <UCard class="mt-10">
-          <template #header>
-            <div class="flex justify-between">
-              <h1>Welcome to Nuxt UI Starter</h1>
-              <ColorScheme><USelect v-model="$colorMode.preference" :options="['system', 'light', 'dark']" /></ColorScheme>
-            </div>
-          </template>
-          <UButton icon="i-heroicons-book-open" to="https://ui.nuxt.com" target="_blank">Open Nuxt UI Documentation</UButton>
-        </UCard>
-        <UCard class="mt-10">
-            <h1>Including:</h1>
-            <p>Nuxt Pages set up</p>
-            <p>Nuxt Ui</p>
-            <p> &lt;p class="text-red-600"&gt;<span class="text-red-600">Tailwindcss</span>&lt;/p&gt; </p>
-            <p>full color scheme</p>
-        </UCard>
-      </UContainer>
-    </div>
+	<div class="h-screen p-60" style="background-image: url('/images/mos-design-V9WkSZx4TLc-unsplash.webp')">
+		<UCard class="mx-auto w-[60%] text-4xl p-5">
+			<p>Hi there, I enjoy...</p>
+			<p @mouseover="newWord(word)" class="w-full text-text-white-500">{{ word }}</p>
+		</UCard>
+	</div>
 </template>
+
+<script setup lang="js">
+    const word = ref("working with tech")
+	const words = ['building websites', 'working with databases', 'working with my Raspberrypi']
+
+	const randomWord = (inword) => {
+		let canidate = words[Math.floor(Math.random() * words.length)]
+		if (canidate == inword) return randomWord(inword)
+		return canidate
+	}
+
+	const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+	const randomChar = () => {
+		return characters[Math.floor(Math.random() * characters.length)]
+	}
+
+	function newWord(inword) {
+		const newRandomWord = randomWord(inword)
+		let iterations = 0
+		const interval = setInterval(() => {
+			if (iterations >= newRandomWord.length+1) return
+
+			let newWord = "";
+			for (let i in newRandomWord) {
+				if (i < iterations) {
+					newWord += newRandomWord[i]
+					continue
+				}
+				newWord += randomChar()
+			}
+			word.value = newWord
+			iterations += 1
+		}, 30);
+	}
+</script>
