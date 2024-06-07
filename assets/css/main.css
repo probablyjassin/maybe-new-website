@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+	font-family: "YouTube-Sans";
+	src: url("/font/youtube-sans/YouTubeSansDarkSemibold.otf") format("opentype");
+}
+
+html,
+body {
+	font-family: "YouTube-Sans";
+}
