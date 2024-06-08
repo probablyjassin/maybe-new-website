@@ -3,12 +3,17 @@
 		<UCard class="mx-auto w-[60%] text-4xl p-5">
 			<p>Hi there, I enjoy...</p>
 			<p @mouseover="newWord(word)" class="w-full text-text-white-500">{{ word }}</p>
+			<UCarousel v-slot="{ item }" :items="items">
+				<img :src="item.img" width="300" height="400" draggable="false" @click="router.push(item.to)"/>
+			</UCarousel>
 		</UCard>
 	</div>
 </template>
 
 <script setup lang="js">
-    const word = ref("working with tech")
+	const router = useRouter()
+
+	const word = ref("working with tech")
 	const words = ['building websites', 'working with databases', 'working with my Raspberrypi']
 
 	const randomWord = (inword) => {
@@ -40,4 +45,13 @@
 			iterations += 1
 		}, 30);
 	}
+
+	const items = [
+	  {"img": 'https://picsum.photos/600/800?random=1', "to": "/test"},
+	  {"img": 'https://picsum.photos/600/800?random=2', "to": "/test"},
+	  {"img": 'https://picsum.photos/600/800?random=3', "to": "/test"},
+	  {"img": 'https://picsum.photos/600/800?random=4', "to": "/test"},
+	  {"img": 'https://picsum.photos/600/800?random=5', "to": "/test"},
+	  {"img": 'https://picsum.photos/600/800?random=6', "to": "/test"}
+	]
 </script>
