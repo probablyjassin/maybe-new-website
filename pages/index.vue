@@ -1,13 +1,13 @@
 <template>
-	<div class="h-screen p-60" style="background-image: url('/images/mos-design-V9WkSZx4TLc-unsplash.webp')">
-		<UCard class="mx-auto w-[60%] text-4xl p-5">
-			<p>Hi there, I enjoy...</p>
-			<p @mouseover="newWord(word)" class="w-full text-text-white-500">{{ word }}</p>
-			<UCarousel v-slot="{ item }" :items="items">
-				<img :src="item.img" width="300" height="400" draggable="false" @click="router.push(item.to)"/>
-			</UCarousel>
-		</UCard>
-	</div>
+	<!-- <div class="h-screen p-60" style="background-image: url('/images/mos-design-V9WkSZx4TLc-unsplash.webp')"> -->
+	<UCard class="mx-auto w-[60%] text-4xl p-5">
+		<p>Hi there, I enjoy...</p>
+		<p @mouseover="newWord(word)" class="w-full text-text-white-500">{{ word }}</p>
+		<UCarousel v-slot="{ item }" :items="items" class="carousel">
+			<img :src="item.img" width="300" height="400" draggable="false" @click="router.push(item.to)" />
+		</UCarousel>
+	</UCard>
+	<!-- </div> -->
 </template>
 
 <script setup lang="js">
@@ -47,11 +47,14 @@
 	}
 
 	const items = [
-	  {"img": 'https://picsum.photos/600/800?random=1', "to": "/test"},
-	  {"img": 'https://picsum.photos/600/800?random=2', "to": "/test"},
-	  {"img": 'https://picsum.photos/600/800?random=3', "to": "/test"},
-	  {"img": 'https://picsum.photos/600/800?random=4', "to": "/test"},
-	  {"img": 'https://picsum.photos/600/800?random=5', "to": "/test"},
-	  {"img": 'https://picsum.photos/600/800?random=6', "to": "/test"}
+	  {"img": 'https://fastly.picsum.photos/id/585/600/800.jpg?hmac=RWepawYNGnJRCBtuuexn16PXp7PgI8xxY54_WQtPqG8', "to": "/projects"},
 	]
 </script>
+
+<style>
+	UCarousel {
+		img {
+			view-transition-name: image-y;
+		}
+	}
+</style>
