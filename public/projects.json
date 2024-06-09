@@ -1,0 +1,44 @@
+[
+    {
+        "id": "anarchychess",
+        "title": "Offizielle r/AnarchyChess Website",
+        "subtitle": "(Bald veröffentlicht:) Website des populärsten Schach-Humor Subreddits",
+        "tech": "Nuxt.js / Tailwindcss",
+        "description": "Hauptverantwortung für die Website und dessen Design im Mod-team des r/AnarchyChess subreddits. Nutzt Nuxt.js's content management für die Inhalte der Website."
+    },
+    {
+        "id": "gaugedle",
+        "title": "Gaugedle",
+        "subtitle": "Worldle-esque Quiz",
+        "tech": "Nuxt.js / Tailwindcss",
+        "description": "Erstellen eines auf einem Videospiel basierenden Quiz-Spiels, inspiriert von dem populären Wordguessing-Game 'Wordle'."
+    },
+    {
+        "id": "mkcshop",
+        "title": "Zukünftiger Merch-Webshop des Max-Klinger-Schulclubs",
+        "subtitle": "[Work in Progress]",
+        "tech": "HTML / CSS / JavaScript / Vue.js",
+        "description": "Um das erstellen von Bestellformularen für den Merch unserer Schule zu verbessern, bin ich für das Frontend des neuen Webshops zuständig. Dieses erstelle ich mit Vue.js als dynamische Single-Page-Application."
+    },
+    {
+        "id": "chessboard",
+        "title": "3D Modell eines Schachbretts",
+        "subtitle": "Junior Ingenieur Akademie",
+        "tech": "Blender",
+        "description": "Designen und 3D-Modellieren eines akkuraten Schachbretts mit Figuren, sowie einer dazugehörigen Schachuhr. "
+    },
+    {
+        "id": "klingerexpress",
+        "title": "Layout des 'Klinger-Express'",
+        "subtitle": "Die Schülerzeitung der Max-Klinger-Schule",
+        "tech": "Adobe InDesign",
+        "description": "Seit 2022 nehme nehme ich an der Redaktion des Schulclubs teil, wo ich mithilfe von Adobe InDesign das Layout der Zeitung erstelle und mit der Chefredaktion die Zeitung finalisiere, sowie Artikel und Beiträge verfasse."
+    },
+    {
+        "id": "seventv",
+        "title": "seventv.py",
+        "subtitle": "API-Wrapper für 7tv.app",
+        "tech": "Python",
+        "description": "Programmieren eines API-Wrappers, der es einfacher macht, den Service 7tv für Twitch-Emotes mit Python abzurufen."
+    }
+]
