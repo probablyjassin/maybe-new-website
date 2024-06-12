@@ -1,17 +1,17 @@
 <template>
 	<div class="h-[60vh] px-[5%] py-[5vh]" style="background-image: url('/images/mos-design-V9WkSZx4TLc-unsplash.webp')">
-		<UCard class="mx-auto text-4xl p-5 flex justify-center">
-			<div class="flex align-middle snap-center text-center">
-				<img src="/images/pfp.webp" alt="avatar" class="w-20">
-				<p class="self-center text-center">Jässin</p>
-			</div>
-			<div>
+		<UCard class="text-4xl p-5">
+			<div class="justify-center">
+				<div class="flex align-middle snap-center text-center">
+					<img src="/images/pfp.webp" alt="avatar" class="w-20" />
+					<p class="self-center text-center">Jässin</p>
+				</div>
 				<p>Hi there, I enjoy...</p>
-				<p @mouseover="newWord(word)" class=" text-text-white-500">{{ word }}</p>
 			</div>
+			<p @mouseover="newWord(word)" class="text-text-white-500">{{ word }}</p>
 		</UCard>
 	</div>
-	<UCarousel v-slot="{ item }" :items="items" class="h-[20vh] carousel snap-none" ref="carouselRef">
+	<UCarousel v-slot="{ item }" :items="items" class="h-[20vh] carousel snap-none">
 		<img
 			:src="item.img"
 			class="h-[40vh] snap-none cursor-pointer"
@@ -46,7 +46,7 @@
 		function newWord(inword) {
 			const newRandomWord = randomWord(inword)
 			let iterations = 0
-			const interval = setInterval(() => {
+			setInterval(() => {
 				if (iterations >= newRandomWord.length+1) return
 
 				let newWord = "";
@@ -83,18 +83,4 @@
 			latestClick.value = []
 			targetLink.value = ""
 		}
-
-
-	const carouselRef = ref()
-	onMounted(() => {
-	  setInterval(() => {
-	    if (!carouselRef.value) return
-
-	    if (carouselRef.value.page === carouselRef.value.pages) {
-	      return carouselRef.value.select(0)
-	    }
-
-	    carouselRef.value.next()
-	  }, 3000)
-	})
 </script>
