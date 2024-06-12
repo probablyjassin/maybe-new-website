@@ -74,8 +74,6 @@
 		function mUp(event) {
 			let x = event.screenX
 			let y = event.screenY
-			console.log(`diff x: ${(x - latestClick.value[0]) / latestClick.value[0]}`)
-			console.log(`diff y: ${(y - latestClick.value[1]) / latestClick.value[1]}`)
 
 			if (x == latestClick.value[0] && y == latestClick.value[1]) {
 				router.push(targetLink.value)
