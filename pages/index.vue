@@ -13,7 +13,7 @@
 			</UCard>
 		</div>
 		<div class="flex w-full my-auto justify-center items-center">
-			<UCarousel v-slot="{ item }" :items="items" class="px-[10%] snap-none" :ui="{'item': 'basis-full'}">
+			<UCarousel v-slot="{ item }" :items="items" class="px-[10%] snap-none" :ui="{'item': 'basis-full'}" arrows>
 				<img
 					:src="item.img"
 					class="max-h-[65vh] w-full snap-none cursor-pointer rounded-lg"
