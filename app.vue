@@ -1,5 +1,8 @@
 <template>
 	<div>
+		<nav class="bg-cyan-700 pt-3 pl-3 pb-3">
+			<nuxt-link to="/">cd /</nuxt-link>
+		</nav>
 		<NuxtPage />
 	</div>
 </template>
