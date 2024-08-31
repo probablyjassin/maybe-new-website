@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<nav class="bg-cyan-700 flex justify-between py-3 px-3">
-			<nuxt-link to="/">cd /</nuxt-link>
+			<nuxt-link to="/" class="bg-pink-700 px-1 rounded-lg">cd /</nuxt-link>
 			<img :src="`/images/lang/${locale == 'en' ? 'de' : 'en'}.png`" class="w-8 hover:scale-105 transition-all duration-75" alt="language icon" @click="switchLocale()">
 		</nav>
 		<NuxtPage />

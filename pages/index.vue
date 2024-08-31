@@ -3,7 +3,7 @@
 		<div class="sm:order-1 md:order-2">
 			<img src="/images/pfp.webp" alt="avatar" class="w-32 h-32 md:w-52 md:h-52 rounded-full" />
 		</div>
-		<div class="w-1/2">
+		<div class="md:w-1/2">
 			<div class="text-3xl space-y-3">
 				<p>{{ $t('welcome') }}</p>
 				<p>{{ $t('text') }}</p>
