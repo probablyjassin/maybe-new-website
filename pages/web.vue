@@ -8,6 +8,7 @@
                     <img :src="`/images/tech/mongo.png`" alt="icon" class="w-52">
                 </div>
             </div>
+            <a class="underline text-pink-600" href="https://nya.care">🡢 nya.care</a>
         </div>
         <div>
             <p class="text-3xl">Anarchychess Website</p>
@@ -17,6 +18,7 @@
 					<img :src="`/images/tech/nuxt.png`" alt="icon">
 				</div>
             </div>
+            <a class="underline text-pink-600" href="https://chessanarchists.org">🡢 chessanarchists.org</a>
         </div>
         <div>
             <p class="text-3xl">Wordle-like Quiz</p>
@@ -26,6 +28,7 @@
 					<img :src="`/images/tech/tailwind.png`" alt="icon">
 				</div>
             </div>
+            <a class="underline text-pink-600" href="https://gaugedle.jassin.aouani.de">🡢 gaugedle.jassin.aouani.de</a>
         </div>
     </div>
 </template>
